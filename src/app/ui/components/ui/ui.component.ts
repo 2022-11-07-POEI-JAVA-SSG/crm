@@ -9,7 +9,7 @@ export class UiComponent {
   public close: boolean;
 
   constructor() {
-    this.close = false;
+    this.close = true;
   }
 
   public toggle(): void {
