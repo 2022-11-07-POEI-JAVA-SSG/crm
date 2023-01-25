@@ -2,6 +2,10 @@
   <app-table-light [headers]="headers" *ngIf="orders$ |async as orders">
     <!-- <pre>{{ orders |json }}</pre> -->
     <tr *ngFor="let order of orders">
+      <td>
+        <app-icon-edit (click)="goToEdit(order.id)"></app-icon-edit>
+        <app-icon-delete></app-icon-delete>
+      </td>
       <td>{{ order.typePresta }}</td>
       <td>{{ order.client }}</td>
       <td>{{ order.nbJours }}</td>
